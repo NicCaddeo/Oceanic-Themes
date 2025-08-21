@@ -1,6 +1,6 @@
 # Oceanic Themes
 
-Oceanic Themes is a collection of ocean-inspired color themes for Visual Studio Code. Dive into the depths with Bathypelagic, Neon Reef, Copper Shark, and Green Moray.
+Oceanic Themes is a collection of ocean-inspired color themes for Visual Studio Code. Dive into the depths with a collection of different color shcemes!
 
 ## Themes Included
 
