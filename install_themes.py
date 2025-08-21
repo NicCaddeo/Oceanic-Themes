@@ -25,14 +25,23 @@ def replace_extension_name(new_name):
 
 def package_and_install():
     print("Packaging extension...")
-    subprocess.run(["vsce", "package"], check=True)
+    # Find vsce executable
+    vsce_cmd = shutil.which("vsce") or shutil.which("@vscode/vsce")
+    if not vsce_cmd:
+        print("Error: 'vsce' command not found. Please install it globally with 'npm install -g @vscode/vsce'.")
+        sys.exit(1)
+    subprocess.run([vsce_cmd, "package"], check=True)
     vsix_files = [f for f in os.listdir(repo_path) if f.endswith(".vsix")]
     if not vsix_files:
         print("No VSIX file found. Packaging may have failed.")
         sys.exit(1)
     vsix_file = vsix_files[0]
     print(f"Installing {vsix_file} to VS Code...")
-    subprocess.run(["code", "--install-extension", vsix_file], check=True)
+    code_cmd = shutil.which("code")
+    if not code_cmd:
+        print("Error: 'code' command not found. Please ensure VS Code is installed and 'code' is in your PATH.")
+        sys.exit(1)
+    subprocess.run([code_cmd, "--install-extension", vsix_file], check=True)
     print("Extension installed successfully.")
 
 if __name__ == "__main__":
