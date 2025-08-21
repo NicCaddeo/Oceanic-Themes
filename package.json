@@ -1,0 +1,37 @@
+{
+  "name": "oceanic-themes",
+  "displayName": "Oceanic Themes",
+  "description": "A collection of ocean-inspired VS Code themes.",
+  "version": "1.0.0",
+  "publisher": "niccaddeo",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Neon Reef",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neon-reef/neon-reef-color-theme.json"
+      },
+      {
+        "label": "Bathypelagic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/bathypelagic/bathypelagic-color-theme.json"
+      },
+      {
+        "label": "Copper Shark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/copper-shark/copper-shark-color-theme.json"
+      },
+      {
+        "label": "Green Moray",
+        "uiTheme": "vs-dark",
+        "path": "./themes/green-moray/green-moray-color-theme.json"
+      }
+    ]
+  }
+}
